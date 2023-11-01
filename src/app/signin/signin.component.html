@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <h3></h3>
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control form-control-sm rounded-0 shadow-sm"
+          placeholder="Enter your username..."
+          required
+          #userName
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control form-control-sm rounded-0 shadow-sm"
+          placeholder="Enter your password..."
+          required
+          #password
+        />
+      </div>
+      <div class="form-group">
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-success rounded-0"
+          (click)="signIn(userName.value, password.value)"
+        >
+          Log In
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="text-center">
+        <button
+          routerLink="/forgot-password"
+          class="btn btn-sm btn-warning rounded-0"
+        >
+          Forgot Password?
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="text-center">
+        <span>
+          Don't have an account? <br />
+          <span routerLink="/signup" class="btn btn-sm btn-primary rounded-0"
+            >Sign Up</span
+          >
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <button
+      type="button"
+      class="btn btn-lg btn-info rounded-0"
+      routerLink="/dashboard"
+    >
+      Go To Dashboard
+    </button>
+  </div>
+</div>

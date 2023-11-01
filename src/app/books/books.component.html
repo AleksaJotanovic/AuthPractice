@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-12">
+      <div class="form-group">
+        <input
+        type="text"
+        class="form-control form-control-sm rounded-0 shadow-sm"
+        placeholder="Book name..."
+        #bookName
+        />
+        <input
+        type="text"
+        class="form-control form-control-sm rounded-0 shadow-sm"
+        placeholder="Book author..."
+        #bookAuthor
+        />
+        <button
+        type="button"
+        class="btn btn-sm rounded-0 btn-outline-primary"
+        (click)="
+        addBook(bookName.value, bookAuthor.value);
+        bookName.value = '';
+        bookAuthor.value = ''
+        "
+        >
+        Add Book
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-12">
+      <div class="border mt-1 p-3" *ngFor="let book of books">
+        <p>{{ book.name }}</p>
+        <p>{{ book.author }}</p>
+      </div>
+    </div>
+  </div>
+</div>
